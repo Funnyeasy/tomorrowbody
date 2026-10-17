@@ -1,6 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tomorrowbody</title>
+<meta name="description" content="Tomorrowbody creates a daily health plan around your real schedule. Developed and operated by Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business).">
+<link rel="canonical" href="https://yuyanapp.top/">
+<meta property="og:title" content="Tomorrowbody">
+<meta property="og:description" content="A daily health plan computed from your real schedule.">
+<meta property="og:url" content="https://yuyanapp.top/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=JetBrains+Mono:wght@400;600&display=swap">
 
 <style>
@@ -292,6 +297,17 @@
 
   /* ---------- 支持 / 页脚 ---------- */
   .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 20px; }
+  .operator {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 18px; padding: 26px 28px;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    gap: 28px; align-items: end;
+  }
+  .operator h3 { margin: 0 0 8px; font-size: 18px; }
+  .operator p { margin: 0; }
+  .operator .legal-name { color: var(--ink); font-weight: 600; max-width: 70ch; }
+  .operator .legal-en { color: var(--dim); font-size: 13.5px; margin-top: 5px; }
+  .operator .org-email { white-space: nowrap; font-size: 13px; color: var(--violet); }
   .foot {
     margin-top: 96px; padding: 30px 0 60px;
     border-top: 1px solid var(--line);
@@ -310,6 +326,8 @@
     .beat { padding-left: calc(var(--rail) + 20px); }
     .beat + .beat { margin-top: 72px; }
     .privacy { padding: 30px 22px; }
+    .operator { grid-template-columns: 1fr; align-items: start; padding: 22px; }
+    .operator .org-email { white-space: normal; overflow-wrap: anywhere; }
   }
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
@@ -319,6 +337,8 @@
 <header class="top">
   <span class="wordmark">Tomorrowbody</span>
   <span class="spacer"></span>
+  <a class="langbtn" href="#developer" style="text-decoration:none" lang-zh>开发主体</a>
+  <a class="langbtn" href="#developer" style="text-decoration:none" lang-en>Developer</a>
   <button class="langbtn" id="lang" type="button">EN</button>
 </header>
 
@@ -500,6 +520,26 @@
       </div>
     </article>
 
+    <article class="beat" id="developer">
+      <div class="clock mono">ORG</div>
+      <p class="eyebrow" lang-zh>开发与运营主体</p>
+      <p class="eyebrow" lang-en>Developer &amp; operator</p>
+      <h2 class="display" lang-zh>Tomorrowbody，由寓言软件开发与运营</h2>
+      <h2 class="display" lang-en>Tomorrowbody is built and operated by Yuyan Software</h2>
+      <p lang-zh>Tomorrowbody 是珠海高新寓言软件开发室（个体工商户）开发并运营的健康生活产品。我们围绕真实作息设计本地优先的计划、提醒和复盘体验。</p>
+      <p lang-en>Tomorrowbody is developed and operated by Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business). We build local-first planning, reminders and reflection around each person’s real schedule.</p>
+      <div class="operator">
+        <div>
+          <h3 lang-zh>法律实体</h3><h3 lang-en>Legal entity</h3>
+          <p class="legal-name" lang-zh>珠海高新寓言软件开发室（个体工商户）</p>
+          <p class="legal-name" lang-en>Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business)</p>
+          <p class="legal-en" lang-zh>英文名称：Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business)</p>
+          <p class="legal-en" lang-en>Chinese name: 珠海高新寓言软件开发室（个体工商户）</p>
+        </div>
+        <a class="org-email mono" href="mailto:zhangcheng@yuyanapp.top">zhangcheng@yuyanapp.top</a>
+      </div>
+    </article>
+
     <article class="beat" id="support">
       <div class="clock mono">—</div>
       <p class="eyebrow" lang-zh>技术支持</p>
@@ -513,7 +553,7 @@
       <div class="support-grid">
         <div class="card">
           <h3 lang-zh>邮件</h3><h3 lang-en>Email</h3>
-          <p class="mono"><a href="mailto:Tomorrowbody@outlook.com">Tomorrowbody@outlook.com</a></p>
+          <p class="mono"><a href="mailto:zhangcheng@yuyanapp.top">zhangcheng@yuyanapp.top</a></p>
           <p class="mono" style="color:var(--faint)" lang-zh>也可以用 App 内「设置 → 找我干嘛」提交，一样有人看。</p>
           <p class="mono" style="color:var(--faint)" lang-en>Settings → What do you want inside the app goes to the same place.</p>
         </div>
@@ -535,10 +575,24 @@
   <footer class="foot">
     <span>© 2026 Tomorrowbody</span>
     <span class="spacer"></span>
+    <span lang-zh>珠海高新寓言软件开发室（个体工商户）</span>
+    <span lang-en>Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business)</span>
     <span lang-zh>建议仅供参考，不构成医疗意见。身体不适请及时就医。</span>
     <span lang-en>Guidance only — not medical advice. If you feel unwell, see a doctor.</span>
   </footer>
 </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zhuhai Gaoxin Yuyan Software Development Studio (Individually Owned Business)",
+  "alternateName": ["珠海高新寓言软件开发室（个体工商户）", "Tomorrowbody"],
+  "url": "https://yuyanapp.top/",
+  "email": "zhangcheng@yuyanapp.top",
+  "brand": { "@type": "Brand", "name": "Tomorrowbody" }
+}
+</script>
 
 <script>
   // 语言切换：整页 zh/en 成对存在，只切根节点上的标记
